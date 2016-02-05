@@ -1,0 +1,152 @@
+ BASH RC MODS
+# Reset default .bashrc
+#    cp /etc/skel/.bashrc ~/.bashrc
+# Kill another pts
+#    pkill -9 -t pts/0
+
+alias la='ls -al'
+alias l='ls -lh'
+alias ll='ls -lh'
+alias p='python'
+alias acs='apt-cache search'
+alias e='subl'
+alias grep='grep --color'
+alias agi='sudo apt-get install -y'
+alias wi='whatis'
+alias t='date +%r'
+alias vnc='x11vnc &> /dev/null &'
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+HISTSIZE=1000000
+HISTFILESIZE=2000000
+
+
+#    Bash shortcuts
+#        Ctrl-a Move to the start of the line.
+#        Ctrl-e Move to the end of the line.
+#        Ctrl-b Move back one character.
+#        Alt-b Move back one word.
+#        Ctrl-f Move forward one character.
+#        Alt-f Move forward one word.
+#        Ctrl-] x Where x is any character, moves the cursor forward to the next occurance of x.
+#        Alt-Ctrl-] x Where x is any character, moves the cursor backwards to the previous occurance of x.
+#        Ctrl-u Delete from the cursor to the beginning of the line.
+#        Ctrl-k Delete from the cursor to the end of the line.
+#        Ctrl-w Delete from the cursor to the start of the word.
+#        Esc-Del Delete previous word (may not work, instead try Esc followed by Backspace)
+#        Ctrl-y Pastes text from the clipboard.
+#        Ctrl-l Clear the screen leaving the current line at the top of the screen.
+#        Ctrl-x Ctrl-u Undo the last changes. Ctrl-_ does the same
+#        Alt-r Undo all changes to the line.
+#        Alt-Ctrl-e Expand command line.
+#        Ctrl-r Incremental reverse search of history.
+#        Alt-p Non-incremental reverse search of history.
+#        !! Execute last command in history
+#        !abc Execute last command in history beginning with abc
+#        !abc:p Print last command in history beginning with abc
+#        !n Execute nth command in history
+#        !$ Last argument of last command
+#        !^ First argument of last command
+#        ^abc^xyz Replace first occurance of abc with xyz in last command and execute it
+
+function cdl () {
+    cd "$@" && l
+    }
+
+
+function md () {
+    mkdir "$@" && cd "$@"
+    }
+
+# make tab cycle through available bash commands instead of just listing them
+#    bind '"\t":menu-complete'
+
+# DATE
+#    sudo dpkg-reconfigure tzdata
+#    sudo apt-get install ntpdate
+#    sudo ntpdate time.nist.gov
+
+
+
+# GET/INSTALL SOFTWARE
+# install deb file
+#    dpkg -i package.deb
+
+
+# NETWORKING
+#    who pinged me? sudo tcpdump -i wlan0 icmp and icmp[icmptype]=icmp-echo
+#    let user mopidy listen on port 80
+#        iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+#    secure copy
+#        scp locatefile.txt user@server:~/folder/
+#        scp user@server:~/folder/remotefile.txt /c/temp/localfolder/
+#        scp sr1.pdf jps35678@ssh.csun.edu:dmv.pdf
+#        scp D:\CSUN\480\ee480mt1prob1.doc jps35678@ssh.csun.edu:/web/data/users13/jps35678/public_html/*
+
+# SOUND
+#    aplay -l
+#    aplay -L
+#    alsactl store
+#    speaker-test -c2 -D hw:0
+#    cat /proc/asound/cards
+#    cat /etc/modprobe.d/alsa-base.conf
+#    cat /proc/asound/cards
+#    apt-get install alsamixergui
+#    http://www.linuxjournal.com/node/1000254
+#    toggle mute:  amixer sset Master toggle
+#    asoundconf list
+#    asoundconf set-default-card NAME_OF_DEFAULT_CARD_TO_USE
+#    mpg123 --control some.mp3
+#    http://zacharybears.com/pyvona/
+#    https://www.ivona.com/us/account/speechcloud/credentials
+#    pip install pyvona
+#    pip install quantumrandom
+
+
+
+# MOPIDY
+#    sudo mopidyctl local scan
+
+
+# MISC
+#    get size of directory
+#        du -sh /directory
+#    cat words.txt | sort | uniq > dictionary.tx
+#    command line calcs
+#        echo "17000/2500" | bc -l
+#    mount a usb drive
+#        tree /dev/disk/
+#    sudo mount /dev/sdb1 /mnt/usb1
+#    mount all:  mount -a
+#    
+#    find "where-to-look" criteria what-to-do
+#    search files in home folder, and subfolders for file with blah in the filename:
+#        find /home/user -name blah
+#        find /home/user -name blah\*
+#    locate files modified less than 10 minutes ago
+#        find / -mmin -10
+#
+#    linux dd command
+#        http://www.linuxquestions.org/questions/linux-newbie-8/learn-the-dd-command-362506/
+
+
+# ZIP | TAR
+#    uncompress and extract a .tar.gz file...
+#        tar -zxvf file1.tar.gz
+#    zip -9 -r <zip file> <folder name>
+#    zip file
+#    zip -9 <zip file> <folder name>
+#    note: -9 means use best compression
+
+
+# VIM
+#    dd    delete line
+#    d$    delete to end of line
+#    u    undo
+#    $    go to end of line
+#    v    visual mode for selecting
+#    y    copy
+#    p    paste
+#    G    go to end of file
+#    w,e,b    jump from word to word
+#    http://www.tuxfiles.org/linuxhelp/vimcheat.html
