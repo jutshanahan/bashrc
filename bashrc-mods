@@ -163,4 +163,14 @@ function md () {
 #	git add <filename>, or git add *
 #	git commit -m "Commit message"
 #	git push origin master
+#
+# make some ssh keys
+#	ssh-keygen -t rsa -b 4096 -C ".......@gmail.com"
+#
+# setup git to use ssh for remote
+#	http://stackoverflow.com/questions/21956750/secure-push-and-pull-with-no-password-git
+#	git remote -v
+#	git remote rm origin
+#	git remote add origin git@github.com:jutshanahan/bashrc.git
+#	git remote -v
 
