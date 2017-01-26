@@ -154,3 +154,13 @@ function md () {
 #    G    go to end of file
 #    w,e,b    jump from word to word
 #    http://www.tuxfiles.org/linuxhelp/vimcheat.html
+#
+#
+#
+# GIT
+# http://rogerdudler.github.io/git-guide/
+# committ some files and push to remote
+#	git add <filename>, or git add *
+#	git commit -m "Commit message"
+#	git push origin master
+
