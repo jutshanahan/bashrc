@@ -87,6 +87,7 @@ function md () {
 #		iface wlan0 inet dhcp
 #		        wpa-ssid tinawifi
 #		        wpa-psk 6503886098
+#          #wireless-ssid 'Guest Wifi'
 # SOUND
 #    aplay -l
 #    aplay -L
