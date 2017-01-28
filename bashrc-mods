@@ -1,4 +1,4 @@
- BASH RC MODS
+# BASH RC MODS
 # Reset default .bashrc
 #    cp /etc/skel/.bashrc ~/.bashrc
 # Kill another pts
