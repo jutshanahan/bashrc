@@ -83,11 +83,14 @@ function md () {
 #        scp sr1.pdf jps35678@ssh.csun.edu:dmv.pdf
 #        scp D:\CSUN\480\ee480mt1prob1.doc jps35678@ssh.csun.edu:/web/data/users13/jps35678/public_html/*
 #		auto wlan0
-#	/etc/network/interfaces
+#	Wireless
+#   http://www.linuxjournal.com/content/wi-fi-command-line
+#   /etc/network/interfaces
 #		iface wlan0 inet dhcp
 #		        wpa-ssid tinawifi
 #		        wpa-psk 6503886098
 #          #wireless-ssid Guest Wifi
+#   
 # SOUND
 #    aplay -l
 #    aplay -L
