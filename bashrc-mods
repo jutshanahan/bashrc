@@ -5,7 +5,7 @@
 #    pkill -9 -t pts/0
 
 alias la='ls -al'
-alias l='ls -lh'
+alias l='ls -lha'
 alias ll='ls -lh'
 alias p='python'
 alias acs='apt-cache search'
