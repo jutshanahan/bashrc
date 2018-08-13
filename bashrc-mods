@@ -14,10 +14,13 @@ alias grep='grep --color'
 alias agi='sudo apt install -y'
 alias wi='whatis'
 alias t='date +%r'
+alias gs='git status'
+alias gpom='git push origin master'
 alias pingall='nmap -T5 -sP 10.0.0.0-255'
 alias vnc='x11vnc &> /dev/null &'
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
+
 HISTSIZE=1000000
 HISTFILESIZE=2000000
 
