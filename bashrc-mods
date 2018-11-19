@@ -18,6 +18,7 @@ alias gs='git status'
 alias gpom='git push origin master'
 alias pingall='nmap -T5 -sP 10.0.0.0-255'
 alias vnc='x11vnc &> /dev/null &'
+alias lsusers='for user in $(awk -F: '{print $1}' /etc/passwd); do groups $user; done'
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
